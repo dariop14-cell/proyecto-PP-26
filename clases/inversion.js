@@ -56,7 +56,7 @@ export default class Inversion {
         const aportesTotales = this.#capitalInicial + this.#aporteMensual * meses;
 
         return {
-            capital: capital,
+            capitalFinal: capital,
             aportesTotales: aportesTotales,
             interesesEstimados: capital - aportesTotales
         }
