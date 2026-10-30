@@ -1,0 +1,121 @@
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b1220;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* Encabezado */
+header {
+    margin-bottom: 35px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #aab7ca;
+}
+
+/* Resumen financiero */
+#resumen {
+    background-color: #142238;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #26364d;
+    max-width: 600px;
+}
+
+#resumen h2 {
+    margin-bottom: 20px;
+}
+
+#resumen p {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+/* Colores de los indicadores */
+#ingresos {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+#gastos {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+#balance {
+    color: #38bdf8;
+    font-weight: bold;
+}/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b1220;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* Encabezado */
+header {
+    margin-bottom: 35px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #aab7ca;
+}
+
+/* Resumen financiero */
+#resumen {
+    background-color: #142238;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #26364d;
+    max-width: 600px;
+}
+
+#resumen h2 {
+    margin-bottom: 20px;
+}
+
+#resumen p {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+/* Colores de los indicadores */
+#ingresos {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+#gastos {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+#balance {
+    color: #38bdf8;
+    font-weight: bold;
+}
