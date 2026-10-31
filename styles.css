@@ -1,4 +1,3 @@
-/* Configuración general */
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +25,6 @@ header p {
     color: #aab7ca;
 }
 
-/* Resumen financiero */
 #resumen {
     background-color: #142238;
     padding: 25px;

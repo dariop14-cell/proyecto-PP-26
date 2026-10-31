@@ -27,7 +27,7 @@ export default class Transaccion {
     }
 
     get fecha(){
-        return this.fecha;
+        return this.#fecha;
     }
 
     get descripcion(){
