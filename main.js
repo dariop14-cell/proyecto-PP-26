@@ -119,17 +119,39 @@ mostrarTransacciones();
 actualizarResumen();
 
 
-const inversion = new Inversion (
-    50000, //capital inicial
-    10000, //aporte mensual
-    8, //tasa anual en porcemtaje
-    10 //paloz en años
-);
+const formularioInversion = document.getElementById("form-inversion");
+formularioInversion.addEventListener("submit", (evento) => {
+    evento.preventDefault();
 
-const resultado = inversion.calcularProyeccion()
+    const capitalInicial = Number(document.getElementById("capital-inicial").value);
+    const aporteMensual = Number(document.getElementById("aporte-mensual").value);
+    const tasaAnual = Number(document.getElementById("tasa-anual").value);
+    const plazo = Number(document.getElementById("plazo").value);
 
-console.log ("resultado de la inversion: ");
-console.log("Capital final: ",formatoMoneda.format(resultado.capitalFinal));
-console.log("Aportes totales: ", formatoMoneda.format(resultado.aportesTotales));
-console.log("Intereses estimados: ",formatoMoneda.format(resultado.interesesEstimados));
+    if(
+        !Number.isFinite(capitalInicial) ||
+        !Number.isFinite(aporteMensual) ||
+        !Number.isFinite(tasaAnual) ||
+        !Number.isInteger(plazo) ||
+        capitalInicial < 0 ||
+        aporteMensual < 0 ||
+        tasaAnual < 0 ||
+        plazo <= 0
+    ){
+        alert("Por favor, ingrese valores validos");
+        return
+    }
 
+    const inversion = new Inversion (
+        capitalInicial,
+        aporteMensual,
+        tasaAnual,
+        plazo
+    );
+
+    const resultado = inversion.calcularProyeccion();
+    document.getElementById("capital-final").textContent = formatoMoneda.format(resultado.capitalFinal);
+    document.getElementById("aportes-totales").textContent = formatoMoneda.format(resultado.aportesTotales);
+    document.getElementById("intereses-estimados").textContent = formatoMoneda.format(resultado.interesesEstimados);
+
+})
