@@ -150,6 +150,232 @@ button:hover {
     line-height: 1.8;
 }
 
+#form-inversion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#form-inversion label {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+#form-inversion input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 7px;
+    border: 1px solid #33465f;
+    background-color: #0b1729;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+#form-inversion input:focus {
+    border-color: #38bdf8;
+    outline: none;
+}
+
+#form-inversion button {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#resultado-inversion {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #0b1729;
+    border: 1px solid #26364d;
+    border-radius: 10px;
+}
+
+#resultado-inversion h3 {
+    margin-bottom: 18px;
+    color: #e2e8f0;
+}
+
+#resultado-inversion p {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+    color: #cbd5e1;
+}
+
+#resultado-inversion p:last-child {
+    margin-bottom: 0;
+}
+
+#capital-final {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+#aportes-totales {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+#intereses-estimados {
+    color: #a78bfa;
+    font-weight: bold;
+}
+
+.grupo-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.grupo-filtros div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fila-categoria {
+    margin-bottom: 15px;
+}
+
+.barra-categoria {
+    width: 100%;
+    height: 18px;
+    background-color: #263449;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.barra-relleno {
+    height: 100%;
+    background-color: #38bdf8;
+    border-radius: 10px;
+}
+
+#graf-balance {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    min-height: 220px;
+    padding: 15px 5px;
+    overflow-x: auto;
+    border-bottom: 1px solid #64748b;
+}
+
+.columna-balance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 75px;
+    height: 200px;
+    gap: 5px;
+}
+
+.columna-balance p {
+    font-size: 11px;
+    text-align: center;
+}
+
+.barra-balance {
+    width: 35px;
+    min-height: 3px;
+    border-radius: 5px 5px 0 0;
+}
+
+.balance-positivo {
+    background-color: #22c55e;
+}
+
+.balance-negativo {
+    background-color: #ef4444;
+}
+
+.columna-balance small {
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+#lista-transacciones {
+    margin-top: 25px;
+}
+
+.grupo-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+#lista-transacciones > div {
+    margin-bottom: 15px;
+}
+
+
+#lista-transacciones label {
+    display: block;
+    margin-bottom: 7px;
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+#fecha-desde,
+#fecha-hasta,
+#filtro-categoria,
+#monto-minimo,
+#monto-maximo {
+    padding: 11px 13px;
+    background-color: #1e293b;
+    color: #f8fafc;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+#fecha-desde,
+#fecha-hasta {
+    width: 190px;
+}
+
+#monto-minimo,
+#monto-maximo {
+    width: 190px;
+}
+
+#filtro-categoria {
+    width: 190px;
+    cursor: pointer;
+}
+
+#fecha-desde:focus,
+#fecha-hasta:focus,
+#filtro-categoria:focus,
+#monto-minimo:focus,
+#monto-maximo:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+#limpiar-filtros {
+    padding: 11px 20px;
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+#limpiar-filtros:hover {
+    background-color: #0369a1;
+}
+
 @media (max-width: 600px) {
 
     body {
@@ -175,5 +401,17 @@ button:hover {
     #transacciones button {
         margin-left: 0;
         margin-top: 10px;
+    }
+
+    #fecha-desde,
+    #fecha-hasta,
+    #filtro-categoria,
+    #monto-minimo,
+    #monto-maximo {
+        width: 100%;
+    }
+
+    #lista-transacciones > div {
+        width: 100%;
     }
 }
