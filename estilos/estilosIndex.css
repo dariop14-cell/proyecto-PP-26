@@ -1,0 +1,196 @@
+.page-header {
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 29px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 14px;
+    color: var(--texto-secundario);
+    line-height: 1.5;
+}
+
+#resumen {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#resumen h2 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.resumen-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--borde);
+    border-radius: 13px;
+    padding: 25px;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    border-color: var(--celeste);
+    transform: translateY(-3px);
+}
+
+.card h3 {
+    font-size: 14px;
+    color: var(--texto-secundario);
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.resumen-cards .card p {
+    font-size: 27px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+#ingresos {
+    color: var(--verde);
+}
+
+#gastos {
+    color: var(--rojo);
+}
+
+#balance {
+    color: var(--celeste);
+}
+
+#analisis-visual {
+    background: var(--panel);
+    border: 1px solid var(--borde);
+    border-radius: 13px;
+    padding: 28px;
+    margin-bottom: 40px;
+}
+
+#analisis-visual h2 {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.graf-container {
+    background: var(--panel);
+    border-radius: 10px;
+}
+
+.graf-container h3 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+#graf-balance {
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+    min-height: 220px;
+    overflow-x: auto;
+    padding: 20px 5px 5px;
+}
+
+.columna-balance {
+    min-width: 75px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    height: 220px;
+}
+
+.columna-balance p {
+    font-size: 11px;
+    color: var(--texto-secundario);
+}
+
+.barra-balance {
+    width: 35px;
+    min-height: 4px;
+    border-radius: 5px 5px 0 0;
+}
+
+.balance-positivo {
+    background: var(--verde);
+}
+
+.balance-negativo {
+    background: var(--rojo);
+}
+
+.columna-balance small {
+    color: var(--texto-secundario);
+    font-size: 10px;
+}
+
+.accesos-section {
+    margin-bottom: 30px;
+}
+
+.accesos-section h2 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.accesos-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.accesos-cards .card p {
+    color: var(--texto-secundario);
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.accesos-cards .card a {
+    display: inline-block;
+    color: var(--celeste);
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.accesos-cards .card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+    .resumen-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .page-header h1 {
+        font-size: 24px;
+    }
+
+    .resumen-cards,
+    .accesos-cards {
+        grid-template-columns: 1fr;
+    }
+
+    #analisis-visual {
+        padding: 20px 15px;
+    }
+
+    #graf-balance {
+        gap: 12px;
+    }
+}

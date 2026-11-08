@@ -14,7 +14,6 @@ export default class Inversion {
 
     calcularProyeccion() {
         const tasaMensual = Math.pow(1 + this.#tasaAnual / 100, 1 / 12) - 1;
-
         const cantidadMeses = this.#plazoAnios * 12;
 
         let capitalInicialProyectado;
@@ -22,16 +21,13 @@ export default class Inversion {
 
         if (tasaMensual === 0) {
             capitalInicialProyectado = this.#aporteMensual * cantidadMeses;
-        } else {
+        }else{
             capitalInicialProyectado = this.#capitalInicial * Math.pow(1 + tasaMensual, cantidadMeses);
-
-            aportesProyectados = this.#aporteMensual * (Math.pow(1 + tasaMensual, cantidadMeses) - 1) / tasaMensual;
+            aportesProyectados = this.#aporteMensual * cantidadMeses;
         }
 
         const capitalFinal = capitalInicialProyectado + aportesProyectados;
-
         const aportesTotales = this.#capitalInicial + this.#aporteMensual * cantidadMeses;
-
         const interesesEstimados = capitalFinal - aportesTotales;
 
         return{

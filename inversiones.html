@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversiones</title>
+    <link rel="stylesheet" href="./estilos/estilos-globales.css">
+    <link rel="stylesheet" href="./estilos/inversiones.css">
+    <script type="module" src="./main.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>FinTech</h2>
+                <span>Dashboard</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <p class="nav-title">Menú principal</p>
+                <a href="./index.html" class="nav-link">Panel principal</a>
+                <a href="./movimientos.html" class="nav-link">Gestión financiera</a>
+                <a href="./inversiones.html" class="nav-link active">Inversiones</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>FinTech Dashboard</p>
+                <span>Gestión financiera personal</span>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1>Simulador de inversiones</h1>
+                    <p>Explorá el crecimiento de tu capital a través del tiempo</p>
+                </div>
+            </header>
+
+            <section class="introduccion-section">
+                <h2>Planificá tu inversión</h2>
+                <p>Simula distintos escenarios financieros modificando el capital inicial, tus aportes mensuales, la tasa de interes anual y el plazo de inversion</p>
+            </section>
+
+            <section id="simulador">
+                <h2>Parametros de inversión</h2>
+                <form id="form-inversion">
+                    <div class="form-group">
+                        <label for="capital-inicial">Capital inicial</label>
+                        <input type="number" id="capital-inicial" min="0" step="1000" required placeholder="Ingrese el capital inicial">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aporte-mensual">Aporte mensual</label>
+                        <input type="number" id="aporte-mensual" min="0" step="1000" required placeholder="Ingrese el aporte mensual">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tasa-anual">Tasa anual (%)</label>
+                        <input type="number" id="tasa-anual" min="0" max="100" step="0.01" value="8" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="plazo">Plazo (en años)</label>
+                        <input type="number" id="plazo" min="1" max="100" step="1" value="10" required>
+                    </div>
+                    <button type="submit">Calcular inversión</button>
+                </form>
+            </section>
+
+            <section id="resultado-inversion">
+                <h2>Resultado de la simulación</h2>
+                <div class="resultados-container">
+                    <div class="card">
+                        <h3>Capital final</h3>
+                        <p id="capital-final">$0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Aportes totales</h3>
+                        <p id="aportes-totales">$0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Intereses estimados</h3>
+                        <p id="intereses-estimados">$0</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

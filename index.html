@@ -4,137 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinTech Dashboard</title>
+    <link rel="stylesheet" href="./estilos/estilos-globales.css">
+    <link rel="stylesheet" href="./estilos/estilosIndex.css">
     <script type="module" src="./main.js"></script>
-    <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    <header>
-        <h1>FinTech Dashboard</h1>
-        <p>Tu panel de control financiero</p>
-    </header>
-
-    <section id="resumen">
-        <h2>Resumen financiero</h2>
-        <p>Ingresos: <span id="ingresos">$0</span></p>
-        <p>Gastos: <span id="gastos">$0</span></p>
-        <p>Balance: <span id="balance">$0</span></p>
-    </section>
-
-    <section>
-        <h2>Registrar movimientos</h2>
-        <form id="form-transaccion">
-            <label for="monto">Monto: </label>
-            <input type="number" id="monto" required>
-
-            <label for="tipo">Tipo de movimiento:</label>
-            <select id="tipo" required>
-                <option value="">Seleccionar</option>
-                <option value="ingreso">Ingreso</option>
-                <option value="gasto">Gasto</option>
-            </select>
-
-            <label for="categoria">Categoria: </label>
-            <input type="text" id="categoria" placeholder="Sueldo, comida, etc..." required>
-
-            <label for="fecha">Fecha: </label>
-            <input type="date" id="fecha" required>
-
-            <label for="descripcion">Descripcion</label>
-            <input type="text" id="descripcion" placeholder="descrip. opcional">
-
-            <button type="submit">Agregar movimiento</button>
-        </form>
-    </section>
-
-    <section id="lista-transacciones">
-        <h2>Filtrar movimientos</h2>
-        <div>
-            <label for="fecha-desde">Desde:</label>
-            <input type="date" id="fecha-desde">
-        </div>
-
-        <div>
-            <label for="fecha-hasta">Hasta:</label>
-            <input type="date" id="fecha-hasta">
-        </div>
-
-        <div>
-            <label for="filtro-categoria">Categoria:</label>
-            <select id="filtro-categoria">
-                <option value="">Todas las categorias</option>
-            </select>
-        </div>
-
-        <div>
-            <label for="monto-minimo">Monto minimo</label>
-            <input type="number" id="monto-minimo" min="0" step="0.01">
-        </div>
-
-        <div>
-            <label for="monto-maximo">Monto maximo</label>
-            <input type="number" id="monto-maximo" min="0" step="0.01">
-        </div>
-
-        <button type="button" id="limpiar-filtros">
-            Limpiar filtros
-        </button>
-
-        <section id="analisis-visual">
-            <h2>Analisis financiero</h2>
-
-            <div class="graf-container">
-                <h3>Gastos por categoria</h3>
-                <div id="graf-categorias"></div>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>FinTech</h2>
+                <span>Dashboard</span>
             </div>
 
-            <div class="graf-container">
-                <h3>Evolucion del balance</h3>
-                <div id="graf-balance"></div>
+            <nav class="sidebar-nav">
+                <p>Menú principal</p>
+                <a href="./index.html" class="nav-link active">Panel principal</a>
+                <a href="./movimientos.html" class="nav-link">Gestión financiera</a>
+                <a href="./inversiones.html" class="nav-link">Inversiones</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>FinTech Dashboard</p>
+                <span>Gestión financiera personal</span>
             </div>
-        </section>
+        </aside>
 
-        <h2>Mis movimientos</h2>
-        <ul id="transacciones">
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1>Panel principal</h1>
+                    <p>Resumen general de tu situación financiera</p>
+                </div>
+            </header>
 
-        </ul>
-    </section>
+            <section id="resumen" class="resumen-seccion">
+                <h2>Resumen financiero</h2>
+                <div class="resumen-cards">
 
-    <section id="simulador"> 
-        <h2>Simulador de inversiones</h2>
+                    <div class="card">
+                        <h3>Ingresos</h3>
+                        <p id="ingresos">$0</p>
+                    </div>
 
-        <form id="form-inversion">
-            <label for="capital-inicial">Capital inicial</label>
-            <input type="number" id="capital-inicial" min="0" step="0.01" value="50000" required>
-            
-            <label for="aporte-mensual">Aporte mensual</label>
-            <input type="number" id="aporte-mensual" min="0" step="0.01" value="10000" required>
+                    <div class="card">
+                        <h3>Gastos</h3>
+                        <p id="gastos">$0</p>
+                    </div>
 
-            <label for="tasa-anual">Tasa anual (%):</label>
-            <input type="number" id="tasa-anual" min="0" max="100" step="0.01" value="8" required>
+                    <div class="card">
+                        <h3>Balance</h3>
+                        <p id="balance">$0</p>
+                    </div>
+                </div>
+            </section>
 
-            <label for="plazo">Plazo (en años):</label>
-            <input type="number" id="plazo" min="1" max="100" step="1" value="10" required>
-        
-            <button type="submit">Calcular inversion</button>
-        </form>
+            <section id="analisis-visual">
+                <h2>Análisis financiero</h2>
+                <div class="graf-container">
+                    <h3>Gastos por categoría</h3>
+                    <div id="graf-categorias"></div>
+                </div>
 
-        <div id="resultado-inversion">
-            <h3>Proyeccion de tu inversion</h3>
-            <p>
-                Capital final: 
-                <span id="capital-final">$0</span>
-            </p>
+                <div class="graf-container">
+                    <h3>Evolución del balance</h3>
+                    <div id="graf-balance"></div>
+                </div>
+            </section>
 
-            <p>
-                Aportes totales:
-                <span id="aportes-totales">$0</span>
-            </p>
+            <section class="accesos-section">
+                <h2>Accesos rápidos</h2>
+                <div class="accesos-cards">
+                    <div class="card">
+                        <h3>Gestión financiera</h3>
+                        <p>Registra y consulta tus ingresos y gastos.</p>
+                        <a href="./movimientos.html">Ir a movimientos</a>
+                    </div>
 
-            <p>
-                Intereses estimados:
-                <span id="intereses-estimados">$0</span>
-            </p>
-        </div>
-    </section>
+                    <div class="card">
+                        <h3>Simulador de inversiones</h3>
+                        <p>Explora distintos escenarios de inversión.</p>
+                        <a href="./inversiones.html">Ir al apartado de simulaciones</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
