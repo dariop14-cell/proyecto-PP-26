@@ -61,7 +61,6 @@ function obtenerTransaccionesFiltradas() {
 
     return cuenta.transacciones.map((transaccion, indice) => ({ transaccion, indice }))
         .filter(({ transaccion }) => {
-
             if(fechaDesde && transaccion.fecha < fechaDesde){
                 return false;
             }

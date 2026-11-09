@@ -1,7 +1,8 @@
+
 .introduccion-section {
-    background: var(--panel);
-    border: 1px solid var(--borde);
-    border-left: 4px solid var(--celeste);
+    background: var(--color-panel);
+    border: 1px solid var(--color-borde);
+    border-left: 4px solid var(--color-primario);
     border-radius: 12px;
     padding: 25px;
     margin: 25px 0;
@@ -9,14 +10,14 @@
 }
 
 .introduccion-section h2 {
-    color: var(--texto);
+    color: var(--color-texto);
     font-size: 24px;
     font-weight: 700;
     margin: 0 0 12px;
 }
 
 .introduccion-section p {
-    color: var(--texto-suave);
+    color: var(--color-texto-suave);
     font-size: 15px;
     line-height: 1.7;
     margin: 0;
@@ -24,8 +25,8 @@
 }
 
 #simulador {
-    background: var(--panel);
-    border: 1px solid var(--borde);
+    background: var(--color-panel);
+    border: 1px solid var(--color-borde);
     border-radius: 12px;
     padding: 25px;
     margin: 25px 0;
@@ -34,7 +35,7 @@
 }
 
 #simulador h2 {
-    color: var(--texto);
+    color: var(--color-texto);
     font-size: 22px;
     font-weight: 700;
     margin: 0 0 22px;
@@ -53,7 +54,7 @@
 }
 
 #form-inversion label {
-    color: var(--texto-secundario);
+    color: var(--color-texto-secundario);
     font-size: 14px;
     font-weight: 600;
 }
@@ -63,8 +64,8 @@
     box-sizing: border-box;
     padding: 11px 13px;
     background-color: var(--color-campo);
-    color: var(--texto);
-    border: 1px solid var(--borde-campo);
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde-campo);
     border-radius: 7px;
     font-family: inherit;
     font-size: 14px;
@@ -73,16 +74,16 @@
 }
 
 #form-inversion input::placeholder {
-    color: var(--texto-suave);
+    color: var(--color-texto-suave);
 }
 
 #form-inversion input:focus {
-    border-color: var(--celeste);
+    border-color: var(--color-primario);
     box-shadow: 0 0 0 3px rgba(34, 184, 240, 0.15);
 }
 
 #form-inversion button {
-    background: var(--celeste);
+    background: var(--color-primario);
     color: var(--color-fondo);
     border: none;
     border-radius: 7px;
@@ -94,7 +95,7 @@
 }
 
 #form-inversion button:hover {
-    background: var(--celeste-hover);
+    background: var(--color-primario-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(34, 184, 240, 0.2);
 }
@@ -108,7 +109,7 @@
 }
 
 #resultado-inversion h2 {
-    color: var(--texto);
+    color: var(--color-texto);
     font-size: 22px;
     font-weight: 700;
     margin: 0 0 22px;
@@ -122,8 +123,8 @@
 }
 
 .resultados-container .card {
-    background: var(--panel);
-    border: 1px solid var(--borde);
+    background: var(--color-panel);
+    border: 1px solid var(--color-borde);
     border-radius: 12px;
     padding: 25px;
     text-align: center;
@@ -134,19 +135,19 @@
 
 .resultados-container .card:hover {
     transform: translateY(-4px);
-    border-color: var(--celeste);
+    border-color: var(--color-primario);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .resultados-container .card h3 {
-    color: var(--texto-suave);
+    color: var(--color-texto-suave);
     font-size: 15px;
     font-weight: 600;
     margin: 0 0 15px;
 }
 
 .resultados-container .card p {
-    color: var(--celeste);
+    color: var(--color-primario);
     font-size: 26px;
     font-weight: 700;
     margin: 0;
@@ -154,7 +155,7 @@
 }
 
 .resultados-container .card:first-child {
-    border-top: 3px solid var(--celeste);
+    border-top: 3px solid var(--color-primario);
 }
 
 .resultados-container .card:nth-child(2) {
@@ -162,11 +163,11 @@
 }
 
 .resultados-container .card:nth-child(3) {
-    border-top: 3px solid var(--verde);
+    border-top: 3px solid var(--color-exito);
 }
 
 .resultados-container .card:nth-child(3) p {
-    color: var(--verde);
+    color: var(--color-exito);
 }
 
 @media (max-width: 900px) {

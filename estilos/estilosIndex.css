@@ -1,3 +1,4 @@
+
 .page-header {
     margin-bottom: 40px;
 }
@@ -10,7 +11,7 @@
 
 .page-header p {
     font-size: 14px;
-    color: var(--texto-secundario);
+    color: var(--color-texto-secundario);
     line-height: 1.5;
 }
 
@@ -32,21 +33,21 @@
 }
 
 .card {
-    background: var(--panel);
-    border: 1px solid var(--borde);
+    background: var(--color-panel);
+    border: 1px solid var(--color-borde);
     border-radius: 13px;
     padding: 25px;
     transition: 0.2s ease;
 }
 
 .card:hover {
-    border-color: var(--celeste);
+    border-color: var(--color-primario);
     transform: translateY(-3px);
 }
 
 .card h3 {
     font-size: 14px;
-    color: var(--texto-secundario);
+    color: var(--color-texto-secundario);
     font-weight: 500;
     margin-bottom: 18px;
 }
@@ -58,20 +59,20 @@
 }
 
 #ingresos {
-    color: var(--verde);
+    color: var(--color-exito);
 }
 
 #gastos {
-    color: var(--rojo);
+    color: var(--color-error);
 }
 
 #balance {
-    color: var(--celeste);
+    color: var(--color-primario);
 }
 
 #analisis-visual {
-    background: var(--panel);
-    border: 1px solid var(--borde);
+    background: var(--color-panel);
+    border: 1px solid var(--color-borde);
     border-radius: 13px;
     padding: 28px;
     margin-bottom: 40px;
@@ -83,7 +84,7 @@
 }
 
 .graf-container {
-    background: var(--panel);
+    background: var(--color-panel);
     border-radius: 10px;
 }
 
@@ -114,7 +115,7 @@
 
 .columna-balance p {
     font-size: 11px;
-    color: var(--texto-secundario);
+    color: var(--color-texto-secundario);
 }
 
 .barra-balance {
@@ -124,15 +125,15 @@
 }
 
 .balance-positivo {
-    background: var(--verde);
+    background: var(--color-exito);
 }
 
 .balance-negativo {
-    background: var(--rojo);
+    background: var(--color-error);
 }
 
 .columna-balance small {
-    color: var(--texto-secundario);
+    color: var(--color-texto-secundario);
     font-size: 10px;
 }
 
@@ -152,7 +153,7 @@
 }
 
 .accesos-cards .card p {
-    color: var(--texto-secundario);
+    color: var(--color-texto-secundario);
     font-size: 13px;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -160,7 +161,7 @@
 
 .accesos-cards .card a {
     display: inline-block;
-    color: var(--celeste);
+    color: var(--color-primario);
     font-size: 13px;
     font-weight: bold;
     text-decoration: none;
